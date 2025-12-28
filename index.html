@@ -3929,66 +3929,7 @@ try {
 }
 </script>
 
-// Make functions globally available for debugging and event listeners
-window.show = show;
-window.toggleUserMenu = toggleUserMenu;
-window.toggleMobileMenu = toggleMobileMenu;
-window.scrollToSection = scrollToSection;
-window.testNavbar = testNavbar;
-window.filterEvents = filterEvents;
-window.toggleViewMode = toggleViewMode;
-window.loadMoreEvents = loadMoreEvents;
-window.addEvent = addEvent;
-window.handleLogin = handleLogin;
-window.handleImageUpload = handleImageUpload;
-window.removeImage = removeImage;
-window.togglePassword = togglePassword;
-window.showSignup = showSignup;
-window.testConnection = testConnection;
-window.showProfileTab = showProfileTab;
-window.showSettingsTab = showSettingsTab;
-window.registerForEvent = registerForEvent;
-window.shareEvent = shareEvent;
-window.addToCalendar = addToCalendar;
 
-console.log('✅ All functions made globally available');
-console.log('📱 Navigation JavaScript loaded successfully');
-
-// Test function for debugging navbar
-function testNavbar() {
-  console.log('🧪 Testing navbar functionality...');
-  
-  // Test if elements exist
-  const elements = [
-    'homeBtn', 'eventsBtn', 'createBtn', 'aboutBtn', 'accountBtn',
-    'mobileMenuBtn', 'loginBtn', 'profileBtn', 'settingsBtn'
-  ];
-  
-  elements.forEach(id => {
-    const element = document.getElementById(id);
-    if (element) {
-      console.log(`✅ ${id} found`);
-    } else {
-      console.error(`❌ ${id} NOT found`);
-    }
-  });
-  
-  // Test if functions exist
-  const functions = ['show', 'scrollToSection', 'toggleUserMenu', 'toggleMobileMenu'];
-  functions.forEach(funcName => {
-    if (typeof window[funcName] === 'function') {
-      console.log(`✅ ${funcName} function available`);
-    } else {
-      console.error(`❌ ${funcName} function NOT available`);
-    }
-  });
-  
-  console.log('🧪 Navbar test completed. Check above for any issues.');
-  return 'Test completed - check console for results';
-}
-
-// Make test function globally available
-window.testNavbar = testNavbar;
 </script>
 
 </body>
